@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="dashboard">
+        <nav class="navbar">
+            <h2>User Dashboard</h2>
+            <button class="logout-btn" id="logout">Logout</button>
+        </nav>
+
+        <main class="dashboard-content">
+            <h1>Welcome, <span id="userName"></span></h1>
+            <p>Welcome to your personal dashboard.</p>
+            <div class="cards">
+                <div class="card">
+                    <h3>My Profile</h3>
+                    <p>View and update your profile information.</p>
+                </div>
+
+                <div class="card">
+                    <h3>My Account</h3>
+                    <p>Manage your account settings.</p>
+                </div>
+                <div class="card">
+                    <h3>My Activities</h3>
+                    <p>View your recent activities.</p>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <script type="module" src="js/user.js"></script>
+    <script type="module" src="js/logout.js"></script>
+</body>
+
+</html>

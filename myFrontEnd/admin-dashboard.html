@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="dashboard">
+        <nav class="navbar">
+            <h2>Admin Dashboard</h2>
+            <button class="logout-btn" id="logout">Logout</button>
+        </nav>
+        <main class="dashboard-content">
+            <h1>Welcome, <span id="userName"></span></h1>
+            <p>You are logged in as an administrator.</p>
+
+            <div class="cards">
+                <div class="card">
+                    <h3>Total Users</h3>
+                    <p id="totalUsers">150</p>
+                </div>
+                <div class="card">
+                    <h3>New Users</h3>
+                    <p id="newUsers">10</p>
+                </div>
+                <div class="card">
+                    <h3>Orders</h3>
+                    <p id="orders">25</p>
+                </div>
+                <div class="card">
+                    <h3>System Status</h3>
+                    <p id="systemStatus">Online</p>
+                </div>
+            </div>
+
+            <section class="manage-users" aria-labelledby="manage-users-title">
+                <h2 id="manage-users-title">Manage Users</h2>
+                <div class="users-table-wrapper">
+                    <table class="users-table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Name</th>
+                                <th scope="col">Username</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Role</th>
+                                <th scope="col">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody class="table-body">
+                            <!-- <tr>
+                                <td class="fullname-td">John don</td>
+                                <td class="username-td">john</td>
+                                <td class="email-td">john@gmail.com</td>
+                                <td>
+                                    <select class="role-td" aria-label="Role for John don">
+                                        <option value="user" selected disabled>User</option>
+                                        <option value="admin">Admin</option>
+                                    </select>
+                                </td>
+                                <td><button class="delete-user-button" type="button">Delete</button></td>
+                            </tr> -->
+
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+
+        <!-- DELETE DIALOG -->
+        <dialog id="delete-user-dialog">
+            <form method="dialog" aria-labelledby="delete-dialog-title">
+                <h2 id="delete-dialog-title">Delete User?</h2>
+                <p id="delete-dialog-message" aria-live="polite">Are you sure you want to delete this user?</p>
+
+                <div class="dialog-actions">
+                    <button type="button" id="cancel-delete-button">Cancel</button>
+                    <button type="button" id="confirm-delete-button">Yes, delete</button>
+                </div>
+            </form>
+        </dialog>
+
+        <!-- ROLE UPDATE DIALOG -->
+        <dialog id="update-role-dialog">
+            <form method="dialog" aria-labelledby="update-role-dialog-title">
+                <h2 id="update-role-dialog-title">Update User Role</h2>
+                <p id="update-role-dialog-message" aria-live="polite">Are you sure you want to update this user's role?
+                </p>
+
+                <div class="dialog-actions">
+                    <button type="button" id="cancel-update-button">Cancel</button>
+                    <button type="button" id="confirm-update-button">Yes, update</button>
+                </div>
+            </form>
+    </div>
+    <script type="module" src="js/admin.js"></script>
+    <script src="js/logout.js"></script>
+</body>
+
+</html>

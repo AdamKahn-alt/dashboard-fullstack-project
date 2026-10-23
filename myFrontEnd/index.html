@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Welcome back</title>
+</head>
+
+<body>
+    <main class="auth-container single-auth">
+        <section class="auth-card login-card">
+            <h1>Welcome Back</h1>
+            <div class="subtitle">Login to your account</div>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email"
+                        value="francisadamson@gmail.com" autocomplete="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password"
+                        autocomplete="current-password" value="adam12345" required>
+                </div>
+
+                <p class="auth-footer forgot-password-message"><a href="forgetpassword.html">Forgot password?</a></p>
+                <button type="submit" class="login-button" id="loginBtn">Login</button>
+                <p id="message" class="form-message"></p>
+            </form>
+
+            <p class="auth-footer">Don't have an account? <a href="signup.html">Sign up</a></p>
+        </section>
+    </main>
+
+    <script type="module" src="js/login.js"></script>
+</body>
+
+</html>
